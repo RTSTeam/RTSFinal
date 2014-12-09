@@ -1,0 +1,15 @@
+input.ng-dirty {
+   border: solid orange 3px;
+  }
+input.ng-invalid.ng-dirty {
+    border: solid orange 3px;
+  }
+input.ng-valid.ng-dirty {
+    border: solid green 3px;
+  }
+  
+#nameReq {color: red;}
+
+#nameLength {color: red;}
+
+#userExist {color: red;}

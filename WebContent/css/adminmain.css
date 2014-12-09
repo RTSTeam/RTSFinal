@@ -1,0 +1,21 @@
+.padding{
+	padding: 20px;
+}
+.paddingBottom{
+	padding-bottom: 10px;
+}
+
+#stationDiv1 
+{
+	float:left; background-color:white; width:40%; height:180px;
+}
+
+#stationDiv2
+{
+	background-color: white; width:60%;height:180px; float:right;
+}
+
+.tabFont
+{
+	font-size: 20px;
+}

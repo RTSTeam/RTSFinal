@@ -1,0 +1,25 @@
+.controls {
+	width:300px;
+	padding-left: 20px;
+}
+.padding {
+    padding-left: 20px;
+}
+.widthcontrols {
+	width:100px;
+}
+input.ng-invalid.ng-dirty {
+	background-color: #FFCC66;
+	border-color: orange;
+	border-style: solid;
+}
+ 
+input.ng-valid.ng-dirty {
+	background-color: #B2E0C2;
+	border-color: #009900;
+	border-style: solid;
+}
+ 
+ul {
+ margin:0;
+}

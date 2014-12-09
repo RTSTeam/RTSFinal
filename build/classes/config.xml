@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="cardService" class="com.mercury.service.CardService" autowire="byType"/>
+    <bean id="cardDao" class="com.mercury.dao.impl.CardDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="QueryOrderedService" class="com.mercury.service.QueryOrderedService" autowire="byType"/>
+    <bean id="RefundService" class="com.mercury.service.RefundService" autowire="byType"/>	
+	<bean id="RegistrationService" class="com.mercury.service.RegistrationService" autowire="byType"/>
+    <bean id="RegistrationDao" class="com.mercury.dao.impl.RegistrationDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="SearchService" class="com.mercury.service.SearchService" autowire="byType"/>
+    <bean id="adminAddTicketService" class="com.mercury.service.AdminAddTicketService" autowire="byType"/>
+    <bean id="adminQueryQtyInfoService" class="com.mercury.service.AdminQueryQtyInfoService" autowire="byType"/>
+    <bean id="adminUpdateQtyService" class="com.mercury.service.AdminUpdateQtyService" autowire="byType"/>
+    <bean id="TicketDao" class="com.mercury.dao.impl.TicketDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="ShowTicketChartService" class="com.mercury.service.ShowTicketChartService" autowire="byType"/>
+    <bean id="ChartInfoDao" class="com.mercury.dao.impl.ChartInfoDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="CheckoutService" class="com.mercury.service.CheckoutService" autowire="byType"/>
+    <bean id="UpdateQtyService" class="com.mercury.service.UpdateQtyService" autowire="byType"/>
+    <bean id="transactionService" class="com.mercury.service.TransactionService" autowire="byType"/>
+    <bean id="adminRefundService" class="com.mercury.service.AdminRefundService" autowire="byType"/>
+    <bean id="adminQueryTransactionService" class="com.mercury.service.AdminQueryTransactionService" autowire="byType"/>
+    <bean id="transactionDao" class="com.mercury.dao.impl.TransactionDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    
+  
+    <bean id="personinfoService" class="com.mercury.service.PersoninfoService" autowire="byType"/>
+    <bean id="personinfoDao" class="com.mercury.dao.impl.PersoninfoDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="GetStationService" class="com.mercury.service.GetStationService" autowire="byType"/>
+    <bean id="findStationService" class="com.mercury.service.FindStationService" autowire="byType"/>
+    <bean id="insertStationService" class="com.mercury.service.InsertStationService" autowire="byType"/>
+    <bean id="stationService" class="com.mercury.service.StationService" autowire="byType"/>
+    <bean id="stationDao" class="com.mercury.dao.impl.StationDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="java:comp/env/jdbc/myoracle" />
+	</bean>
+</beans>
